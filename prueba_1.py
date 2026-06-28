@@ -2,9 +2,20 @@ import time
 import csv
 import os
  
-from version_secuencial import procesar_logs_secuencial
-from version_optimizada import procesar_logs_optimizado
-from generar_logs import generar_logs
+try:
+    from version_secuencial import procesar_logs_secuencial
+except ImportError:
+    procesar_logs_secuencial = None
+
+try:
+    from version_optimizada import procesar_logs_optimizado
+except ImportError:
+    procesar_logs_optimizado = None
+
+try:
+    from generar_logs import generar_logs
+except ImportError:
+    generar_logs = None
  
  
 # ─────────────────────────────────────────────
