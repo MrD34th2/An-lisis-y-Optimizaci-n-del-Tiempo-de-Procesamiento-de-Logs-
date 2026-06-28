@@ -137,14 +137,16 @@ def main():
  
     # 2. Ejecutar versión secuencial N veces
     print(f"\n[2/4] Ejecutando versión SECUENCIAL ({REPETICIONES} veces)...")
+    procesar_logs_secuencial(ARCHIVO_LOGS)  # Calentamiento (descartado): evita el sesgo del arranque en frío
     resultados_sec = []
     for i in range(1, REPETICIONES + 1):
         r = procesar_logs_secuencial(ARCHIVO_LOGS)
         resultados_sec.append(r)
         print(f"      Ejecución {i}: {r['tiempo_ms']} ms")
- 
+
     # 3. Ejecutar versión optimizada N veces
     print(f"\n[3/4] Ejecutando versión OPTIMIZADA ({REPETICIONES} veces)...")
+    procesar_logs_optimizado(ARCHIVO_LOGS)  # Calentamiento (descartado): evita el sesgo del arranque en frío
     resultados_opt = []
     for i in range(1, REPETICIONES + 1):
         r = procesar_logs_optimizado(ARCHIVO_LOGS)

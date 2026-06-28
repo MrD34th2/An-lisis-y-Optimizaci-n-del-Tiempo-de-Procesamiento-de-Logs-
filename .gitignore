@@ -1,0 +1,8 @@
+# Cache de Python
+__pycache__/
+*.pyc
+
+# Artefactos generados por el experimento
+logs.txt
+resultados.csv
+reporte.txt
