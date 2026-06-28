@@ -1,12 +1,3 @@
-"experimento.py"
-"Script principal del experimento."
- 
-"Ejecuta ambas versiones (secuencial y optimizada) N veces,"
-"registra los tiempos de ejecución y guarda los resultados en:"
-  "- resultados.csv  → datos crudos para análisis"
-  "- reporte.txt     → resumen legible del experimento"
- "No requiere librerías externas. Solo usa: time, csv, os"
- 
 import time
 import csv
 import os
